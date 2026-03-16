@@ -5,6 +5,9 @@ import AnimateOnScroll from "./AnimateOnScroll";
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
+  const officialEmail = "senior.mgr@idealizeer.com";
+  const personalEmail = "sumitdorle489@gmail.com";
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const text = `Hi, I'm ${form.name} (${form.email}). ${form.message}`;
@@ -43,13 +46,23 @@ const ContactSection = () => {
                   </div>
                 </a>
 
-                <a href="mailto:sumitdorle489@gmail.com" className="glass-tile flex items-center gap-4 rounded-2xl p-4">
+                <a href={`mailto:${officialEmail}`} className="glass-tile flex items-center gap-4 rounded-2xl p-4">
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/20 text-primary">
                     <Mail className="h-5 w-5" />
                   </span>
                   <div>
-                    <p className="text-xs uppercase tracking-[0.16em] text-foreground/62">Email</p>
-                    <p className="text-sm font-semibold text-foreground">sumitdorle489@gmail.com</p>
+                    <p className="text-xs uppercase tracking-[0.16em] text-foreground/62">Email (Official)</p>
+                    <p className="text-sm font-semibold text-foreground">{officialEmail}</p>
+                  </div>
+                </a>
+
+                <a href={`mailto:${personalEmail}`} className="glass-tile flex items-center gap-4 rounded-2xl p-4">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/20 text-primary">
+                    <Mail className="h-5 w-5" />
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.16em] text-foreground/62">Email (Personal)</p>
+                    <p className="text-sm font-semibold text-foreground">{personalEmail}</p>
                   </div>
                 </a>
 
@@ -64,7 +77,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <a
                   href="https://www.linkedin.com/in/sumit-dorle-4980ba1a8/"
                   target="_blank"
@@ -82,11 +95,18 @@ const ContactSection = () => {
                   Call
                 </a>
                 <a
-                  href="mailto:sumitdorle489@gmail.com"
+                  href={`mailto:${personalEmail}`}
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-foreground/30 px-3 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-foreground transition-all hover:border-primary hover:text-primary"
                 >
                   <Mail className="h-4 w-4" />
-                  Mail
+                  Personal Mail
+                </a>
+                <a
+                  href={`mailto:${officialEmail}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-foreground/30 px-3 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-foreground transition-all hover:border-primary hover:text-primary"
+                >
+                  <Mail className="h-4 w-4" />
+                  Official Mail
                 </a>
               </div>
             </article>

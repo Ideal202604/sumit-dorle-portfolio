@@ -35,7 +35,10 @@ const ResumeSidebar = () => (
         </div>
         <div className="flex items-center gap-2.5">
           <Mail className="w-3.5 h-3.5 text-resume-gold shrink-0" />
-          <span className="break-all text-[11px]">sumitdorle489@gmail.com</span>
+          <div className="space-y-1">
+            <span className="block break-all text-[11px]">senior.mgr@idealizeer.com</span>
+            <span className="block break-all text-[11px]">sumitdorle489@gmail.com</span>
+          </div>
         </div>
         <div className="flex items-center gap-2.5">
           <MapPin className="w-3.5 h-3.5 text-resume-gold shrink-0" />

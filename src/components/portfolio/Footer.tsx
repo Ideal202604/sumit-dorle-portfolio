@@ -26,7 +26,14 @@ const Footer = () => (
             className="inline-flex items-center gap-2 rounded-xl border border-white/24 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-all hover:border-accent hover:text-accent"
           >
             <Mail className="h-4 w-4" />
-            Email
+            Personal Email
+          </a>
+          <a
+            href="mailto:senior.mgr@idealizeer.com"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/24 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-all hover:border-accent hover:text-accent"
+          >
+            <Mail className="h-4 w-4" />
+            Official Email
           </a>
           <a
             href="https://www.linkedin.com/in/sumit-dorle-4980ba1a8/"
